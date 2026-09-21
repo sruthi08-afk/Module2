@@ -4,33 +4,38 @@
 ---
 
 ### AIM  
-To write a Python program to print a triangular star pattern using loops.
-
+To write a Python program to print Right down Mirror Star Pattern .
 ---
 
 ### ALGORITHM
 
-1. Begin the program.  
+1.Begin the program.  
 2. Read the integer `n` from the user using `input()`. This will determine the number of rows in the pattern.  
-3. Initialize a variable `i = 0`. This will help adjust the spacing before the stars.  
-4. Loop through rows from `0` to `n - 1`:  
-   - For each row, calculate the number of spaces to print using the formula: `((n - rows - 1) * 2) + i`.  
-   - Print the calculated number of spaces using `print(" ", end="")`.  
-   - Increment `i` by 1 after each row.  
-   - Print stars using a nested loop: the number of stars in each row is `rows + 1`, printed using `print("*", end="  ")`.  
-   - Print a newline after each row using `print("")` to move to the next line.  
-5. Terminate the program.
+3.Run a loop i from 0 to n-1 (total n iterations), each iteration representing a row.
+4.For each row i, print 2 * i spaces (multiplied by 2 for better alignment), to shift the stars to the right.
+5.Run a loop j from n down to i+1, printing a "* " in each iteration. This ensures that the number of stars decreases with each row.
+6.After printing all stars for the current row, move to the next line.
+7.Terminate the program.
 
 ---
 
 ### PROGRAM
 ```
-#Reg.No:
-#Name:
+#Reg.NO 212223020026
+#Name SRUTHI.K
 #Add Your Code Here
+n=int(input())
 
+for i in range(n):
+    print(" "*2*i,end="")
+    for j in range(n,i,-1):
+        print("*",end=" ")
+    print("")    
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/1bec4e97-6009-4ecd-bedc-a192bd929b9e)
+
 
 ### RESULT
+Thus the Python program to print Right down Mirror Star Pattern is executed successfully.
